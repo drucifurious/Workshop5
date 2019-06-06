@@ -1,0 +1,63 @@
+﻿@model workshop5.Models.Agents
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Agents</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AgtFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgtFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgtMiddleInitial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgtMiddleInitial)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgtLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgtLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgtBusPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgtBusPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgtEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgtEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgtPosition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgtPosition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgencyId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgencyId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AgentId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
