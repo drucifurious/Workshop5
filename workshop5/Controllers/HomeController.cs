@@ -22,6 +22,13 @@ namespace workshop5.Controllers
             return View();
         }
 
+        public IActionResult SignUp()
+        {
+            ViewData["Message"] = "Your SignUP page.";
+
+            return View();
+        }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
