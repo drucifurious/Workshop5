@@ -31,7 +31,7 @@ namespace workshop5.Controllers
 
         public IActionResult Registration()
         {
-            ViewData["Message"] = "Please Register to Continue...";
+            ViewData["Message"] = "Please Register to Continue.. .";
 
             return View();
         }
