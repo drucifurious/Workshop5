@@ -44,6 +44,13 @@ namespace workshop5.Controllers
             return View();
         }
 
+        public IActionResult Booking()
+        {
+            ViewData["Message"] = "Please book to Continue.. .";
+
+            return View();
+        }
+
 
         public IActionResult Contact()
         {
