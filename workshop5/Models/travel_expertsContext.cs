@@ -302,6 +302,13 @@ namespace workshop5.Models
                     .HasMaxLength(50);
 
                 entity.Property(e => e.PkgStartDate).HasColumnType("datetime");
+                entity.Property(e => e.Images).HasMaxLength(4000);
+
+                //   imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
+
+                //entity.Property(e => e.imagProduct.ImageUrl = "Images/Products/" + Image.ImageFile);
+
+
             });
 
             modelBuilder.Entity<PackagesProductsSuppliers>(entity =>
