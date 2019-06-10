@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\Asian-Expedition.jpg" />
+    <Content Remove="wwwroot\images\Caribbean.jpg" />
+    <Content Remove="wwwroot\images\European Vacation.jpg" />
+    <Content Remove="wwwroot\images\Polynesian Paradise.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\Asian-Expedition.jpg" />
+    <None Include="wwwroot\images\Caribbean.jpg" />
+    <None Include="wwwroot\images\European Vacation.jpg" />
+    <None Include="wwwroot\images\Polynesian Paradise.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
