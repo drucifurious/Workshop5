@@ -44,6 +44,13 @@ namespace workshop5.Controllers
             return View();
         }
 
+        public IActionResult Packages()
+        {
+            ViewData["Message"] = "Your Packages page.";
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
