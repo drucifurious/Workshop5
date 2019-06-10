@@ -30,16 +30,16 @@ namespace workshop5.Controllers
             return View();
         }
 
-        public IActionResult SignUp()
+        public IActionResult SignIn()
         {
-            ViewData["Message"] = "Your SignUP page.";
+            ViewData["Message"] = "Your SignIn page.";
 
             return View();
         }
 
-        public IActionResult Registration()
+        public IActionResult SignUp()
         {
-            ViewData["Message"] = "Please Register to Continue.. .";
+            ViewData["Message"] = "Please Sign-Up to Continue.. .";
 
             return View();
         }
