@@ -5,14 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using workshop5.Models;
+using workshop5.Controllers;
+using Microsoft.EntityFrameworkCore;
 
 namespace workshop5.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly travel_expertsContext _context;
+
+        public HomeController(travel_expertsContext context)
         {
-            return View();
+            _context = context;
+        }
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Packages.ToListAsync());
         }
 
         public IActionResult About()
@@ -22,16 +30,16 @@ namespace workshop5.Controllers
             return View();
         }
 
-        public IActionResult SignUp()
+        public IActionResult SignIn()
         {
-            ViewData["Message"] = "Your SignUP page.";
+            ViewData["Message"] = "Your SignIn page.";
 
             return View();
         }
 
-        public IActionResult Registration()
+        public IActionResult SignUp()
         {
-            ViewData["Message"] = "Please Register to Continue.. .";
+            ViewData["Message"] = "Please Sign-Up to Continue.. .";
 
             return View();
         }
@@ -67,6 +75,19 @@ namespace workshop5.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("BookingId,BookingDate,BookingNo,TravelerCount,CustomerId,TripTypeId,PackageId")] Bookings bookings)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(bookings);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(bookings);
         }
     }
 }
