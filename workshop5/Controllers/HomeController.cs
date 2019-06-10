@@ -5,14 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using workshop5.Models;
+using workshop5.Controllers;
+using Microsoft.EntityFrameworkCore;
 
 namespace workshop5.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly travel_expertsContext _context;
+
+        public HomeController(travel_expertsContext context)
         {
-            return View();
+            _context = context;
+        }
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Packages.ToListAsync());
         }
 
         public IActionResult About()
