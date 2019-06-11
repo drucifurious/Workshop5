@@ -6,13 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\images\Asian-Expedition.jpg" />
-    <Content Remove="wwwroot\images\Caribbean.jpg" />
-    <Content Remove="wwwroot\images\European Vacation.jpg" />
-    <Content Remove="wwwroot\images\Polynesian Paradise.jpg" />
+    <Compile Remove="Views\Packages\Images\**" />
+    <Content Remove="Views\Packages\Images\**" />
+    <EmbeddedResource Remove="Views\Packages\Images\**" />
+    <None Remove="Views\Packages\Images\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\Asian_Expedition.jpg" />
+    <Content Remove="wwwroot\images\Caribbean_New_Year.jpg" />
+    <Content Remove="wwwroot\images\European_Vacation.jpg" />
+    <Content Remove="wwwroot\images\Polynesian_Paradise.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\Asian_Expedition.jpg" />
+    <None Include="wwwroot\images\Caribbean_New_Year.jpg" />
+    <None Include="wwwroot\images\European_Vacation.jpg" />
+    <None Include="wwwroot\images\Polynesian_Paradise.jpg" />
     <None Include="wwwroot\images\Asian-Expedition.jpg" />
     <None Include="wwwroot\images\Caribbean.jpg" />
     <None Include="wwwroot\images\European Vacation.jpg" />

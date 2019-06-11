@@ -1,0 +1,75 @@
+﻿@model workshop5.Models.Packages
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Packages</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PkgName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PkgName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PkgStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PkgStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PkgEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PkgEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PkgDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PkgDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PkgBasePrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PkgBasePrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PkgAgencyCommission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PkgAgencyCommission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Images)
+        </dt>
+        <dd>
+            
+            <img width="500" height="500" src=@Html.DisplayFor(model => model.Images) >
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PackageId">Edit</a> |
+    <a asp-action="Index">Back to List</a> |
+    <a asp-action="Booking" asp-controller="Home">Book the Package</a> |
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
