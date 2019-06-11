@@ -9,22 +9,22 @@ using workshop5.Models;
 
 namespace workshop5.Controllers
 {
-    public class PackagesController : Controller
+    public class DestinationsController : Controller
     {
         private readonly travel_expertsContext _context;
 
-        public PackagesController(travel_expertsContext context)
+        public DestinationsController(travel_expertsContext context)
         {
             _context = context;
         }
 
-        // GET: Packages
+        // GET: Destinations
         public async Task<IActionResult> Index()
         {
             return View(await _context.Packages.ToListAsync());
         }
 
-        // GET: Packages/Details/5
+        // GET: Destinations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,18 +42,18 @@ namespace workshop5.Controllers
             return View(packages);
         }
 
-        // GET: Packages/Create
+        // GET: Destinations/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Packages/Create
+        // POST: Destinations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PackageId,PkgName,PkgStartDate,PkgEndDate,PkgDesc,PkgBasePrice,PkgAgencyCommission")] Packages packages)
+        public async Task<IActionResult> Create([Bind("PackageId,PkgName,PkgStartDate,PkgEndDate,PkgDesc,PkgBasePrice,PkgAgencyCommission,Images")] Packages packages)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace workshop5.Controllers
             return View(packages);
         }
 
-        // GET: Packages/Edit/5
+        // GET: Destinations/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,12 +80,12 @@ namespace workshop5.Controllers
             return View(packages);
         }
 
-        // POST: Packages/Edit/5
+        // POST: Destinations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PackageId,PkgName,PkgStartDate,PkgEndDate,PkgDesc,PkgBasePrice,PkgAgencyCommission")] Packages packages)
+        public async Task<IActionResult> Edit(int id, [Bind("PackageId,PkgName,PkgStartDate,PkgEndDate,PkgDesc,PkgBasePrice,PkgAgencyCommission,Images")] Packages packages)
         {
             if (id != packages.PackageId)
             {
@@ -115,7 +115,7 @@ namespace workshop5.Controllers
             return View(packages);
         }
 
-        // GET: Packages/Delete/5
+        // GET: Destinations/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,7 +133,7 @@ namespace workshop5.Controllers
             return View(packages);
         }
 
-        // POST: Packages/Delete/5
+        // POST: Destinations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
