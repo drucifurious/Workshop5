@@ -1,7 +1,5 @@
 ﻿@model IEnumerable<workshop5.Models.Packages>
 
-
-
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -27,7 +25,7 @@
                 </p>
             </div>
         </div>
-        <img src="img/ipad.png" class="img-fluid" alt="">
+        <img src="~/images/ipad.png" class="img-fluid" alt="">
     </div>
 </section>
 <!-- Projects Section -->
@@ -36,7 +34,7 @@
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <div class="col-xl-8 col-lg-7">
-                <img class="img-fluid mb-3 mb-lg-0" img src="~/images/Asian-Expedition.jpg" />
+                <img class="img-fluid mb-3 mb-lg-0" img src="~/images/Asian_Expedition.jpg" />
             </div>
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
@@ -48,7 +46,7 @@
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
             <div class="col-lg-6">
-                <img class="img-fluid" img src="~/images/Polynesian Paradise.jpg" /> 
+                <img class="img-fluid" img src="~/images/Polynesian_Paradise.jpg" /> 
             </div>
             <div class="col-lg-6">
                 <div class="bg-black text-center h-100 project">
@@ -65,7 +63,7 @@
         <!-- Project Two Row -->
         <div class="row justify-content-center no-gutters">
             <div class="col-lg-6">
-                <img class="img-fluid" src="~/images/European Vacation.jpg" />
+                <img class="img-fluid" src="~/images/European_Vacation.jpg" />              
             </div>           
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
@@ -82,7 +80,7 @@
     </div>
 </section>
 <!-- Signup Section -->
-<section id="signup" class="signup-section">
+@*@*<section id="signup" class="signup-section">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -96,8 +94,9 @@
         </div>
     </div>
 </section>
-<!-- Contact Section -->
-<section class="contact-section bg-black">
+
+ @*Contact Section*@ 
+@*<section class="contact-section bg-black">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-3 mb-md-0">
@@ -145,35 +144,7 @@
             </a>
         </div>
     </div>
-</section>
-
-@*<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal">Vacation Packages</h1>
-            <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-            <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-        </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-    </div>
-
-    @foreach (var item in Model)
-    {*@
-
-@*<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">@Html.DisplayFor(modelItem => item.PkgName)</h2>
-                <p class="lead">@Html.DisplayFor(modelItem => item.PkgDesc)</p>
-                <p class="lead">@Html.DisplayNameFor(model => model.PkgStartDate)</p>
-                <p class="lead">@Html.DisplayNameFor(model => model.PkgEndDate)</p>
-                <p class="lead">@Html.DisplayNameFor(model => model.PkgBasePrice)</p>
-
-            </div>
-            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-        </div>
-    </div>*@
-@*}*@
+</section>*@
 
 
 

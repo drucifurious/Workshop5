@@ -24,10 +24,6 @@
     <None Include="wwwroot\images\Caribbean_New_Year.jpg" />
     <None Include="wwwroot\images\European_Vacation.jpg" />
     <None Include="wwwroot\images\Polynesian_Paradise.jpg" />
-    <None Include="wwwroot\images\Asian-Expedition.jpg" />
-    <None Include="wwwroot\images\Caribbean.jpg" />
-    <None Include="wwwroot\images\European Vacation.jpg" />
-    <None Include="wwwroot\images\Polynesian Paradise.jpg" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-reboot.css.map" />
@@ -1632,7 +1628,6 @@
     <PackageReference Include="bootstrap" Version="4.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
 </Project>
