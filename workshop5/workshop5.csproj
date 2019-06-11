@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <Content Remove="wwwroot\images\Asian_Expedition.jpg" />
     <Content Remove="wwwroot\images\Caribbean_New_Year.jpg" />
     <Content Remove="wwwroot\images\European_Vacation.jpg" />
@@ -25,11 +24,6 @@
     <None Include="wwwroot\images\Caribbean_New_Year.jpg" />
     <None Include="wwwroot\images\European_Vacation.jpg" />
     <None Include="wwwroot\images\Polynesian_Paradise.jpg" />
-=======
-    <None Include="wwwroot\images\Asian-Expedition.jpg" />
-    <None Include="wwwroot\images\Caribbean.jpg" />
-    <None Include="wwwroot\images\European Vacation.jpg" />
-    <None Include="wwwroot\images\Polynesian Paradise.jpg" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
     <None Include="wwwroot\vendor\bootstrap\css\bootstrap-reboot.css.map" />
@@ -1628,7 +1622,6 @@
     <None Include="wwwroot\vendor\jquery\jquery.slim.js" />
     <None Include="wwwroot\vendor\jquery\jquery.slim.min.js" />
     <None Include="wwwroot\vendor\jquery\jquery.slim.min.map" />
->>>>>>> 74f1981feae8da36e5e73e2605ae0d7b006641fb
   </ItemGroup>
 
   <ItemGroup>
