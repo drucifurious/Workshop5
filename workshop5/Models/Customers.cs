@@ -15,7 +15,8 @@ namespace workshop5.Models
         public string CustCountry { get; set; }
         public string CustHomePhone { get; set; }
         public string CustBusPhone { get; set; }
-        public string CustEmail { get; set; }
+        public string
+            CustEmail { get; set; }
         public int? AgentId { get; set; }
         public string PasswordNotHashed { get; set; }
         public byte[] PasswordHashed { get; set; }
