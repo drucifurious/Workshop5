@@ -84,5 +84,18 @@ namespace workshop5.Controllers
             }
             return View(customers);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateBooking([Bind("BookingId,BookingDate,BookingNo,TravelerCount,CustomerId,TripTypeId,PackageId")] Bookings bookings)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(bookings);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(bookings);
+        }
     }
 }
