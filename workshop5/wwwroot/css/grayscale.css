@@ -6,14 +6,14 @@
 
 #mainNav {
   min-height: 56px;
-  background-color: white;
+  background-color: black;
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
   color: #64a19d;
-  border: 1px solid #64a19d;
+  border: 1px solid #161616;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -21,13 +21,13 @@
 }
 
 #mainNav .navbar-brand {
-  color: black;
+  color: #161616;
   font-weight: 700;
   padding: .9rem 0;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  /*color: fade (white, 80%);*/
+  color: fade(white, 80%);
   outline: none;
   background-color: transparent;
 }
@@ -42,7 +42,7 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: white;
+    background-color: transparent;
     -webkit-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
   }
@@ -63,10 +63,10 @@
     color: white;
   }
   #mainNav.navbar-shrink {
-    background-color: #161616;
+    background-color: black;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: white;
+    color: #161616;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
@@ -203,7 +203,7 @@
   .projects-section .project-text hr {
     border-color: #64a19d;
     border-width: .25rem;
-    width: 100%;
+    width: 30%;
   }
 }
 
