@@ -20,12 +20,12 @@
       &:hover {
         color: fade(white, 80%);
         outline: none;
-        background-color: transparent;
+        background-color: black;
       }
       &:active,
       &:focus {
         outline: none;
-        background-color: transparent;
+        background-color: black;
       }
     }
   }
