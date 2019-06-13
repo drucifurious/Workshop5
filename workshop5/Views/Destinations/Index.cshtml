@@ -78,10 +78,14 @@
                 </td>*@
                 <td>
 
-                    <a asp-action="Edit" asp-route-id="@item.PackageId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.PackageId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.PackageId">Delete</a>
 
+                    <a asp-action="Edit" asp-route-id="@item.PackageId">Edit</a> |
+
+                    <a asp-action="Buy" asp-controller="Destinations" asp-route-id="@item.PackageId">Buy</a>
+                    @*<a asp-action="Edit" asp-route-id="@item.PackageId">Edit</a> |
+>>>>>>> 062b7c5ad556cbc4182e0d6531e2c5f452f8952e
+                    <a asp-action="Details" asp-route-id="@item.PackageId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PackageId">Delete</a>*@
                 </td>
                 <td>
                     <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.PackageId" role="button">Select</a>

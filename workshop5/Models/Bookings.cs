@@ -12,5 +12,6 @@ namespace workshop5.Models
         public int? CustomerId { get; set; }
         public string TripTypeId { get; set; }
         public int? PackageId { get; set; }
+        public Packages package { get; set; }
     }
 }
