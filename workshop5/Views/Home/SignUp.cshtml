@@ -26,7 +26,7 @@
             <div class="row" style="margin-top:400px;">
                 <p>Please fill in this form to create an account.       * all information are required</p>
                 <div class="col-md-4">
-                    <form asp-action="Create">
+                    <form asp-action="Create" asp-controller="CustomersController">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group">
                             <label asp-for="CustFirstName" class="control-label"><i class="fa fa-user"></i><b>First Name</b><sup>*</sup> </label>
@@ -56,7 +56,7 @@
                             <label asp-for="CustProv" class="control-label"><b> Province</b><sup>*</sup></label>
                             <input asp-for="CustProv" class="form-control" />
                             <span asp-validation-for="CustProv" class="text-danger"> </span>
-                            <select name="CustProv" id="prov" required>
+                            @*<select name="CustProv" id="prov" required>
                                 <option value="AB">Alberta</option>
                                 <option value="BC">British Columbia</option>
                                 <option value="MB">Manitoba</option>
@@ -70,7 +70,7 @@
                                 <option value="NT">Northwest Territories</option>
                                 <option value="NU">Nunavut</option>
                                 <option value="YT">Yukon</option>
-                            </select>
+                            </select>*@
 
                         </div>
                         <div class="form-group">
