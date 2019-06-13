@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using workshop5.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace workshop5.Controllers
 {
@@ -41,6 +42,41 @@ namespace workshop5.Controllers
 
             return View(packages);
         }
+
+        // GET: Buy Package
+        public async Task<IActionResult> Buy(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Packages package = await _context.Packages
+                .FirstOrDefaultAsync(m => m.PackageId == id);
+
+            if (package == null)
+            {
+                return NotFound();
+            }
+
+            DateTime today = DateTime.Now.Date;
+            string bookingNumber = "BBADED";
+
+            Bookings booking = new Bookings();
+            booking.PackageId = package.PackageId;
+            booking.CustomerId = Convert.ToInt32(HttpContext.Session.GetString("userid"));
+            booking.BookingDate = today;
+            booking.TravelerCount = 1;
+            booking.TripTypeId = "L";
+            booking.BookingNo = bookingNumber;
+
+            _context.Add(booking);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Bookings");
+        }
+
+
 
         // GET: Destinations/Create
         public IActionResult Create()

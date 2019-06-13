@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using workshop5.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace workshop5.Controllers
 {
@@ -21,7 +22,18 @@ namespace workshop5.Controllers
         // GET: Bookings
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Bookings.ToListAsync());
+            int id = Convert.ToInt32(HttpContext.Session.GetString("userid"));
+            
+
+            var bookings = await _context.Bookings.Include(b => b.package)
+                .Where(m => m.CustomerId == id).ToListAsync();
+            if (bookings == null)
+            {
+                return NotFound();
+            }
+
+            return View(bookings);
+            //return View(await _context.Bookings.ToListAsync());
         }
 
         // GET: Bookings/Details/5
