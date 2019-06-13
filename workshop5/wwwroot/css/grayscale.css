@@ -27,7 +27,7 @@
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: black;
+  color: white;
   outline: none;
   background-color: white;
 }
@@ -42,7 +42,7 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: black;
+    background-color: white;
     -webkit-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
   }
@@ -63,7 +63,7 @@
     color: white;
   }
   #mainNav.navbar-shrink {
-    background-color: black;
+    background-color: white;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #161616;
@@ -151,7 +151,7 @@
 }
 
 .btn-primary {
-  background-color: #64a19d;
+  background-color: #0094ff;
 }
 
 .btn-primary:hover {
