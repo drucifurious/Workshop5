@@ -10,6 +10,10 @@
     <h4>Packages</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dd>
+
+            <img width="500" height="500" src=@Html.DisplayFor(model => model.Images)>
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.PkgName)
         </dt>
@@ -40,26 +44,16 @@
         <dd>
             @Html.DisplayFor(model => model.PkgBasePrice)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PkgAgencyCommission)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PkgAgencyCommission)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Images)
-        </dt>
-        <dd>
-            
-            <img width="500" height="500" src=@Html.DisplayFor(model => model.Images) >
-        </dd>
+        
+       
     </dl>
 </div>
 
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.PackageId">Edit</a> |
-    <a asp-action="Index">Back to List</a> |
-    <a asp-action="Booking" asp-controller="Home">Book the Package</a> |
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.PackageId" role="button">Edit</a> 
+    <a class="btn btn-primary" asp-action="Index" role="button">Back to List</a> 
+    <a class="btn btn-primary" asp-action="Booking" asp-controller="Home" role="button">Book the Package</a>
+  
 </div>
 
 
