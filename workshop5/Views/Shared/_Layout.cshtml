@@ -48,9 +48,23 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" asp-controller="Destinations" asp-action="Index">Destinations</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" asp-controller="Home" asp-action="Chinese">Chinese</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbardrop" data-toggle="dropdown" 
+                               asp-controller="Home" asp-action="Chinese">Language</a>               
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">French</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Chinese">Chinese</a>
+                            <a class="dropdown-item" href="#">Filipino</a>
+                            <a class="dropdown-item" href="#">Arabic</a>
+                        </div>
                     </li>
+
+
+
+
+
+
+
                 </ul>
             </div>
 
