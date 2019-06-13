@@ -17,7 +17,6 @@
         </div>
     </div>
 </header>
-<!-- About Section -->
 <section id="about" class="about-section text-center">
     <div class="container">
         <div class="row">
@@ -29,55 +28,9 @@
                 </p>
             </div>
         </div>
-        <div>
-            
-                <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-                <div id="player"></div>
-
-                <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
-                </script>
-        </div>
-    </div>
+       </div>
+   
+    
 </section>
 <!-- Projects Section -->
 <section id="projects" class="projects-section bg-light">
@@ -95,7 +48,7 @@
                     </p>
                     <hr class="d-none d-lg-block mb-0 ml-0">
                     <br />
-                    <button type="button" class="btn btn-primary btn-sm"><a asp-controller="Home" asp-action="booking">Book Now!</a></button>
+                    <button type="button" class="btn btn-primary btn-sm">Book Now!</button>
                 </div>
             </div>
         </div>
@@ -109,9 +62,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
                             <h4 class="text-white">El Nido Paradise</h4>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                            <br />
                             <p class="mb-0 text-white-50">Explore our list that features a hidden slice of paradise in Palawan, a rocky wonderland of aquamarine waters in Cape Greco, the aptly named Lazy Beach on Koh Rong Island, offering unparalleled serenity, and so much more.</p>
                             <br />
-                            <button type="button" class="btn btn-primary btn-sm">Book Now!<a asp-controller="Home" asp-action="booking"></a></button>
+                            <button type="button" class="btn btn-primary btn-sm">Book Now!</button>
                             <hr class="d-none d-lg-block mb-0 ml-0">
                         </div>
                     </div>
@@ -128,9 +83,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
                             <h4 class="text-white">Banff National Park</h4>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                            <br />
                             <p class="mb-0 text-white-50">The elements that make the Canadian Rockies a year round dream destination converge in perfect harmony in Banff National Park. Established after railway workers stumbled onto a thermal hot spring, Banff became Canada’s first national park in 1885 and today is part of a UNESCO World Heritage Site.</p>
                             <br />
-                            <button type="button" class="btn btn-primary btn-sm">Book Now!<a asp-controller="Home" asp-action="booking"></a></button>
+                            <button type="button" class="btn btn-primary btn-sm">Book Now!</button>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
                     </div>

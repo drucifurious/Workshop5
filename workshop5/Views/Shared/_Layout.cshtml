@@ -16,7 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template -->
 
-    <link href="~/css/grayscale.min.css" rel="stylesheet">
+
+    <link href="~/css/grayscale.css" rel="stylesheet" />
+    <link href="~/css/grayscale.min.css" rel="stylesheet" />
+
 
 </head>
 
@@ -25,7 +28,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Welcome</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <h1>Navigation</h1>
                 <i class="fas fa-bars"></i>
@@ -38,8 +41,10 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" asp-controller="Home" asp-action="About">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" asp-controller="Home" asp-action="SignIn">SignIn</a>
+                    <li class="nav-item">                  
+
+                            <a class="nav-link js-scroll-trigger" asp-controller="Home" asp-action="SignIn" >SignIn</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" asp-controller="Home" asp-action="SignUp">SignUp</a>
@@ -47,6 +52,17 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" asp-controller="Destinations" asp-action="Index">Destinations</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link js-scroll-trigger dropdown-toggle" id="navbardrop" data-toggle="dropdown" 
+                               asp-controller="Home" asp-action="Chinese">Language</a>               
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">French</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Chinese">Chinese</a>
+                            <a class="dropdown-item" href="#">Filipino</a>
+                            <a class="dropdown-item" href="#">Arabic</a>
+                        </div>
+                    </li>
+
 
                 </ul>
             </div>
@@ -65,8 +81,8 @@
         <div class="container">
             Copyright &copy; Your Website 2019
         </div>
-        <!-- Signup Section -->
-        @*<section id="signup" class="signup-section">
+         @*Signup Section*@ 
+        <section id="signup" class="signup-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -79,7 +95,7 @@
                     </div>
                 </div>
             </div>
-        </section>*@
+        </section>
          @*Contact Section*@ 
         <section class="contact-section bg-black">
             <div class="container">
