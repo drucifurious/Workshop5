@@ -27,14 +27,14 @@
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+  color: black;
   outline: none;
-  background-color: transparent;
+  background-color: black;
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
-  background-color: transparent;
+  background-color: black;
 }
 
 @media (min-width: 992px) {
@@ -42,7 +42,7 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: black;
     -webkit-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
   }
