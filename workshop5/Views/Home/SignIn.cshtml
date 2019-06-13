@@ -2,39 +2,54 @@
 @{
     ViewData["Title"] = "SignIn";
 }
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="~/css/signin.css" rel="stylesheet" />
 
-<body class="body1">
+            <h1 class="mx-auto my-0 text-uppercase"></h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">
 
-    <h2>Sign in Form</h2>
+                <form>
+                    <div class="imgcontainer">
+                        <img src="~/images/traveler-icon.jpg" alt="Avatar" class="avatar" />
+                    </div>
 
-    <form >
-        <div class="imgcontainer">
-            <img src="~/images/traveler-icon.jpg"  alt="Avatar" class="avatar"/>
-        </div>
+                    <div class="container">
+                        <label for="uname"><b>Username or Email</b></label>
+                        <input type="text" placeholder="Enter Username or Email" name="uname" required>
 
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+                        <button type="submit">Login</button>
+                        <br> <br> <br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                        <br />
+                        <label class="psw">Forgot <a href="#">password?</a></label>
+                    </div>
 
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
+                    
+                       
+                       
+                 
+                </form>
+                </h2>
 
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-    </form>
+           
+                </div>
+            </div>
+      
 
-</body>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="~/css/signin.css" rel="stylesheet" />
+
 
 
