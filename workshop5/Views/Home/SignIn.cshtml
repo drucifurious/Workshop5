@@ -1,4 +1,4 @@
-﻿
+﻿@model workshop5.Models.Customers
 @{
     ViewData["Title"] = "SignIn";
 }
@@ -15,8 +15,8 @@
 <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-
             <h1 class="mx-auto my-0 text-uppercase"></h1>
+<<<<<<< HEAD
             <h2 class="text-white-50 mx-auto mt-2 mb-5">
 
                 <form>
@@ -31,27 +31,35 @@
 
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="psw" required>
+=======
+            <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+            <form asp-controller="Customers" asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="imgcontainer">
+                    <img src="~/images/traveler-icon.jpg" alt="Avatar" class="avatar" />
+                </div>
+>>>>>>> c7048e0d28d5fcd5c97b809e34c064a4776405ab
 
-                        <button type="submit">Login</button>
-                        <br> <br> <br>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                        <br />
-                        <label class="psw">Forgot <a href="#">password?</a></label>
-                    </div>
+                <div class="container">
+                    <input asp-for="CustEmail">
+                    <span asp-validation-for="CustEmail" class="text-danger"></span>
 
                     
-                       
-                       
-                 
-                </form>
-                </h2>
+                    <input asp-for="PasswordNotHashed">
+                    <span asp-validation-for="PasswordNotHashed" class="text-danger"></span>
 
-           
+                    <button type="submit">Login</button>
+                    <br> <br> <br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <br />
+                    <label class="psw">Forgot <a href="#">password?</a></label>
                 </div>
-            </div>
-  </header>    
+            </form>
+        </div>
+    </div>
+</header>
 
 
 
@@ -60,5 +68,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="~/css/signin.css" rel="stylesheet" />
 
+@section Scripts {
 
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 

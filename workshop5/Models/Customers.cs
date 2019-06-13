@@ -23,10 +23,14 @@ namespace workshop5.Models
         public string CustCountry { get; set; }
         public string CustHomePhone { get; set; }
         public string CustBusPhone { get; set; }
+
+        [Display(Name = "Email", Prompt = "Enter your email")]
         public string CustEmail { get; set; }
         public int AgentId { get; set; }
 
-        [NotMapped]
+        
+        [DataType(DataType.Password)]
+        [Display(Name = "Password", Prompt = "Enter your password")]
         public string PasswordNotHashed { get; set; }
 
         [NotMapped]

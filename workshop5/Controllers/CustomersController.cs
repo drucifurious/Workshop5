@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using workshop5.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace workshop5.Controllers
 {
@@ -22,6 +23,31 @@ namespace workshop5.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Customers.ToListAsync());
+        }
+
+        // POST: Login 
+        [HttpPost]
+        public async Task<IActionResult> Login(string CustEmail, string PasswordNotHashed)
+        {
+            Customers customers = await _context.Customers.FirstOrDefaultAsync(c => c.CustEmail == CustEmail);
+            if (customers == null || customers.PasswordNotHashed != PasswordNotHashed)
+            {
+                return NotFound();
+            }
+
+            HttpContext.Session.SetString("email", customers.CustEmail);
+            HttpContext.Session.SetString("username", customers.CustFirstName);
+            HttpContext.Session.SetString("userid", customers.CustomerId.ToString());
+            return RedirectToAction("Index", "Home");
+        }
+
+        // GET: Logout
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("email");
+            HttpContext.Session.Remove("username");
+            HttpContext.Session.Remove("userid");
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Customers/Details/5

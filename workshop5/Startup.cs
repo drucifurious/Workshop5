@@ -38,6 +38,10 @@ namespace workshop5
 
             var connection = @"Server=tcp:drew-serv.database.windows.net,1433;Initial Catalog=travel_experts;Persist Security Info=False;User ID=drew;Password=W0rdpass;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             services.AddDbContext<travel_expertsContext>(options => options.UseSqlServer(connection));
+            services.AddSession(options => {
+                options.Cookie.Name = ".TravelExperts.Session";
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +59,7 @@ namespace workshop5
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
