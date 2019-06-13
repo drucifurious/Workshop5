@@ -24,6 +24,7 @@ namespace workshop5.Models
         public string CustHomePhone { get; set; }
         public string CustBusPhone { get; set; }
 
+        [Required(ErrorMessage = "Email is required")]
         [Display(Name = "Email", Prompt = "Enter your email")]
         public string CustEmail { get; set; }
         public int AgentId { get; set; }
@@ -36,9 +37,7 @@ namespace workshop5.Models
         [NotMapped]
         [Compare("PasswordNotHashed", ErrorMessage = "Password doesn't match.")]
         public string ConfirmPassword { get; set; }
-        [NotMapped]
         public byte[] PasswordHashed { get; set; }
-        [NotMapped]
         public string PasswordSalt { get; set; }
 
 
