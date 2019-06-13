@@ -10,6 +10,10 @@
     <h4>Packages</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dd>
+
+            <img width="500" height="500" src=@Html.DisplayFor(model => model.Images)>
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.PkgName)
         </dt>
@@ -40,19 +44,8 @@
         <dd>
             @Html.DisplayFor(model => model.PkgBasePrice)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PkgAgencyCommission)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PkgAgencyCommission)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Images)
-        </dt>
-        <dd>
-            
-            <img width="500" height="500" src=@Html.DisplayFor(model => model.Images) >
-        </dd>
+        
+       
     </dl>
 </div>
 
