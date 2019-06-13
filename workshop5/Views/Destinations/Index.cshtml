@@ -83,6 +83,9 @@
                     <a asp-action="Delete" asp-route-id="@item.PackageId">Delete</a>
 
                 </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.PackageId" role="button">Select</a>
+                </td>
             </tr>
             }
         </tbody>
