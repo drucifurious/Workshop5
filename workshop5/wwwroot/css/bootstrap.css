@@ -144,7 +144,7 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: darkseagreen;
     text-decoration: none;
     background-color: transparent
 }
@@ -2463,7 +2463,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-primary {
-    color: #fff;
+    color: #28a745;
     background-color: #007bff;
     border-color: #007bff
 }

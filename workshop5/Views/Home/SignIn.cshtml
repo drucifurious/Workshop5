@@ -15,29 +15,13 @@
 <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-            <h1 class="mx-auto my-0 text-uppercase"></h1>
-
+            <h1 class="mx-auto my-0 text-uppercase"></h1>                                                                              
             <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
-
-                @*<form>
-
-                    <div class="imgcontainer">
-                        @*<img src="~/images/traveler-icon.jpg" alt="Avatar" class="avatar" />*@
-                    @*</div>
-
-                    <div class="container">
-                        <label for="uname"><b>Username or Email</b></label>
-                        <input type="text" placeholder="Enter Username or Email" name="uname" required>
-
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>**@
             <form asp-controller="Customers" asp-action="Login">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-
-
+                <div class="imgcontainer">
+                  
+                </div>
                 <div class="container">
                     <input asp-for="CustEmail">
                     <span asp-validation-for="CustEmail" class="text-danger"></span>
